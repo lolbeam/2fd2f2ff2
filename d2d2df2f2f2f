@@ -117,7 +117,7 @@ StatsHealthBar.Position = UDim2.new(-0.00336122862, 0, 0.164894029, 0)
 StatsHealthBar.Size = UDim2.new(0, 130, 0, 20)
 
 local StatsGradient1 = Instance.new("UIGradient", StatsTop)
-StatsGradient1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(185, 160, 230)), ColorSequenceKeypoint.new(1, Color3.fromRGB(100, 90, 155))}
+StatsGradient1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(230, 175, 175)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 169, 169))}
 StatsGradient1.Rotation = 90
 
 local StatsGradient2 = Instance.new("UIGradient", StatsFrame)
@@ -125,11 +125,11 @@ StatsGradient2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fro
 StatsGradient2.Rotation = 90
 
 local StatsGradient3 = Instance.new("UIGradient", StatsHealthBackground)
-StatsGradient3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(60, 60, 60)), ColorSequenceKeypoint.new(1, Color3.fromRGB(30, 30, 30))}
+StatsGradient3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(60, 60, 60)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 202, 202))}
 StatsGradient3.Rotation = 90
 
 local StatsGradient4 = Instance.new("UIGradient", StatsHealthBar)
-StatsGradient4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(185, 160, 230)), ColorSequenceKeypoint.new(1, Color3.fromRGB(100, 90, 155))}
+StatsGradient4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(230, 198, 198)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 213, 213))}
 StatsGradient4.Rotation = 90
 
 local TargHighlight = Instance.new("Highlight", CoreGui)
@@ -320,7 +320,7 @@ end
 
 -- Window
 
-local Actyrn = UiLib:CreateWindow("souless.gg", Vector2.new(500, 600), Enum.KeyCode.RightShift)
+local Actyrn = UiLib:CreateWindow("souless.gg", Vector2.new(500, 600), Enum.KeyCode.Insert)
 
 -- Tabs
 
@@ -404,7 +404,7 @@ local TargDotTog = TargetAimbotSec:AddToggle("Dot", false, function(Value)
 	TargetAimbot.Dot = Value
 end, "TargetDot")
 
-TargDotTog:AddColorpicker(Color3.fromRGB(170, 120, 210), function(Value)
+TargDotTog:AddColorpicker(Color3.fromRGB(210, 183, 183), function(Value)
 	TargDotCircle.Color = Value
 	TargTracerLine.Color = Value
 end, "TargetDotTracerColor")
@@ -421,11 +421,11 @@ local TargHighlightTog = TargetAimbotSec:AddToggle("Highlight", false, function(
 	TargetAimbot.Highlight = Value
 end, "TargetHighlight")
 
-TargHighlightTog:AddColorpicker(Color3.fromRGB(170, 120, 210), function(Value)
+TargHighlightTog:AddColorpicker(Color3.fromRGB(255, 185, 185), function(Value)
 	TargHighlight.FillColor = Value
 end, "TargetHighlightFillColor")
 
-TargHighlightTog:AddColorpicker(Color3.fromRGB(90, 65, 110), function(Value)
+TargHighlightTog:AddColorpicker(Color3.fromRGB(255, 190, 190), function(Value)
 	TargHighlight.OutlineColor = Value
 end, "TargetHighlightOutlineColor")
 
@@ -441,7 +441,7 @@ local TargFovTog = TargetAimbotSec:AddToggle("FOV Visible", false, function(Valu
 	TargFovCircle.Visible = Value
 end, "TargetFOVVisible")
 
-TargFovTog:AddColorpicker(Color3.fromRGB(80, 15, 180), function(Value)
+TargFovTog:AddColorpicker(Color3.fromRGB(180, 134, 134), function(Value)
 	TargFovCircle.Color = Value
 end, "TargetFOVColor")
 
@@ -536,7 +536,7 @@ local CamTracerTog = CameraAimbotSec:AddToggle("Tracer", false, function(Value)
 	CameraAimbot.Tracer = Value
 end, "CameraTracer")
 
-CamTracerTog:AddColorpicker(Color3.fromRGB(170, 120, 210), function(Value)
+CamTracerTog:AddColorpicker(Color3.fromRGB(210, 147, 147), function(Value)
 	CamTracerLine.Color = Value
 end, "CameraTracerColor")
 
@@ -544,11 +544,11 @@ local CamHighlightTog = CameraAimbotSec:AddToggle("Highlight", false, function(V
 	CameraAimbot.Highlight = Value
 end, "CameraHighlight")
 
-CamHighlightTog:AddColorpicker(Color3.fromRGB(170, 120, 210), function(Value)
+CamHighlightTog:AddColorpicker(Color3.fromRGB(249, 187, 187), function(Value)
 	CamHighlight.FillColor = Value
 end, "CameraHighlightFillColor")
 
-CamHighlightTog:AddColorpicker(Color3.fromRGB(90, 65, 110), function(Value)
+CamHighlightTog:AddColorpicker(Color3.fromRGB(255, 193, 193), function(Value)
 	CamHighlight.OutlineColor = Value
 end, "CameraHighlightOutlineColor")
 
@@ -578,7 +578,7 @@ local CamFovTog = CameraAimbotSec:AddToggle("FOV Visible", false, function(Value
 	CamFovCircle.Visible = Value
 end, "CameraFOVVisible")
 
-CamFovTog:AddColorpicker(Color3.fromRGB(80, 15, 180), function(Value)
+CamFovTog:AddColorpicker(Color3.fromRGB(255, 193, 193), function(Value)
 	CamFovCircle.Color = Value
 end, "CameraFOVColor")
 
